@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+    etherpad:
+        build: etherpad
+        ports:
+            - 8080:8080
+        volumes:
+            - ./config/settings.json:/opt/etherpad/settings.json
+        environment:
+            NODE_ENV: production
